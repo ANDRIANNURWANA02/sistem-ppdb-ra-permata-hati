@@ -5,7 +5,9 @@ menggunakan **Laravel Framework**.
 
 ## 🚀 Fitur
 - Login & Register
+- Forgot Password
 - Dashboard User & Admin
+- Profile Siswa dan Admin di Dashboard (Ganti Password)
 - Pendaftaran Siswa
 - Manajemen Data Pendaftaran
 - Export Data Pendaftaran

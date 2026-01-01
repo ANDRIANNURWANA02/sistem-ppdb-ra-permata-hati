@@ -257,7 +257,7 @@
 
                 <!-- Anggota 1 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
-                    <img src="{{ asset('images/organigram/ketua.jpg') }}" alt="Ketua"
+                    <img src="{{ asset('img/ketua.jpeg') }}" alt="Ketua"
                         class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-yellow-400">
                     <h3 class="text-xl font-semibold text-gray-800">H. Usman S.Ag.</h3>
                     <p class="text-yellow-500 font-medium">Ketua RA</p>
