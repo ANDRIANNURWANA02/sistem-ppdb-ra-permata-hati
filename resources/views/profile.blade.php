@@ -70,24 +70,9 @@
     </header>
 
     <!-- Tombol Chatbot -->
-    <button id="chatbotButton"
-        class="fixed bottom-6 right-6 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
+    <a href="https://nurwana02.app.n8n.cloud/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat" class="fixed bottom-6 right-6 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
         💬 Bantuan
-    </button>
-
-    <!-- Popup Chatbot -->
-    <div id="chatbotPopup" class="hidden fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-lg overflow-hidden">
-        <div class="bg-orange-500 text-white px-4 py-2 font-semibold flex justify-between items-center">
-            <span>Chatbot Pendaftaran RA</span>
-            <button id="closeChat" class="text-white font-bold">&times;</button>
-        </div>
-        <div id="chatMessages" class="p-3 h-64 overflow-y-auto text-sm"></div>
-        <form id="chatForm" class="flex border-t">
-            <input id="userMessage" type="text" class="flex-grow p-2 text-sm outline-none" placeholder="Ketik pesan...">
-            <button type="submit" class="bg-orange-500 text-white px-4 hover:bg-orange-600">Kirim</button>
-        </form>
-    </div>
-    </div>
+    </a>
 
     <script>
         const chatbotButton = document.getElementById('chatbotButton');
@@ -149,14 +134,14 @@
             {{-- BUTTON DAFTAR SEKARANG --}}
             @guest
                 <a href="{{ route('pendaftaran.index') }}" class="bg-orange-500 text-white font-bold px-8 py-3 rounded-full text-lg
-                                       hover:bg-yellow-500 transition duration-300 shadow-lg" id="tentang">
+                                       hover:bg-orange-600 transition duration-300 shadow-lg" id="tentang">
                     Daftar Sekarang
                 </a>
             @endguest
 
             @auth
                 <a href="{{ route('pendaftaran.index') }}" class="bg-orange-500 text-white font-bold px-8 py-3 rounded-full text-lg
-                                       hover:bg-yellow-500 transition duration-300 shadow-lg">
+                                       hover:bg-orange-600 transition duration-300 shadow-lg">
                     Daftar Sekarang
                 </a>
             @endauth
@@ -257,32 +242,32 @@
 
                 <!-- Anggota 1 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
-                    <img src="{{ asset('img/ketua.jpeg') }}" alt="Ketua"
-                        class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-yellow-400">
+                    <img src="{{ asset('img/organisasi/ketua.jpeg') }}" alt="Ketua"
+                        class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white">
                     <h3 class="text-xl font-semibold text-gray-800">H. Usman S.Ag.</h3>
                     <p class="text-yellow-500 font-medium">Ketua RA</p>
                 </div>
 
                 <!-- Anggota 2 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
-                    <img src="{{ asset('images/organigram/wakil.jpg') }}" alt="Wakil"
-                        class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-yellow-400">
+                    <img src="{{ asset('img/organisasi/kepala_sekolah.jpeg') }}" alt="Wakil"
+                        class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white">
                     <h3 class="text-xl font-semibold text-gray-800">Hj. Aulia Prihanti S.Ag.</h3>
                     <p class="text-yellow-500 font-medium">Kepala Sekolah</p>
                 </div>
 
                 <!-- Anggota 3 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
-                    <img src="{{ asset('images/organigram/bendahara.jpg') }}" alt="Bendahara"
-                        class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-yellow-400">
+                    <img src="{{ asset('img/organisasi/sekretaris.png') }}" alt="Bendahara"
+                        class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white">
                     <h3 class="text-xl font-semibold text-gray-800">Afifah Arubani, S.Pd. </h3>
-                    <p class="text-yellow-500 font-medium">Operator</p>
+                    <p class="text-yellow-500 font-medium">Sekretaris</p>
                 </div>
 
                 <!-- Anggota 4 -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center">
-                    <img src="{{ asset('images/organigram/sekretaris.jpg') }}" alt="Sekretaris"
-                        class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-yellow-400">
+                    <img src="{{ asset('img/organisasi/bendahara.png') }}" alt="Sekretaris"
+                        class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white">
                     <h3 class="text-xl font-semibold text-gray-800">Indriyani Lurita, A.Md.</h3>
                     <p id="fasilitas" class="text-yellow-500 font-medium">Bendahara</p>
                 </div>
@@ -365,8 +350,8 @@
                 <!-- Kegiatan 1 -->
                 <div
                     class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('images/kegiatan/mengaji.jpg') }}" alt="Belajar Mengaji"
-                        class="w-full h-48 object-cover">
+                    <img src="{{ asset('img/kegiatan/mengaji.jpeg') }}" alt="Belajar Mengaji"
+                        class="w-full h-50 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold mb-2">Belajar Mengaji</h3>
                         <p class="text-gray-600 text-sm">Kegiatan rutin untuk meningkatkan kemampuan baca Al-Qur'an
@@ -377,11 +362,11 @@
                 <!-- Kegiatan 2 -->
                 <div
                     class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('images/kegiatan/seni.jpg') }}" alt="Kelas Seni"
-                        class="w-full h-48 object-cover">
+                    <img src="{{ asset('img/kegiatan/seni.jpg') }}" alt="Kelas Seni"
+                        class="w-full h-50 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold mb-2">Kelas Seni</h3>
-                        <p class="text-gray-600 text-sm">Melatih kreativitas anak dalam bidang menggambar dan mewarnai.
+                        <p class="text-gray-600 text-sm">Melatih kreativitas anak dalam mengeksplorasi nada, irama, dan harmonisasi musik secara berkelompok.
                         </p>
                     </div>
                 </div>
@@ -389,8 +374,8 @@
                 <!-- Kegiatan 3 -->
                 <div
                     class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('images/kegiatan/outing.jpg') }}" alt="Outing Class"
-                        class="w-full h-48 object-cover">
+                    <img src="{{ asset('img/kegiatan/outing.jpeg') }}" alt="Outing Class"
+                        class="w-full h-50 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold mb-2">Outing Class</h3>
                         <p class="text-gray-600 text-sm">Belajar di luar kelas untuk mengenal lingkungan dan dunia

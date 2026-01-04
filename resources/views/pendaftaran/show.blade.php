@@ -184,7 +184,7 @@
         </a>
 
         <a href="{{ route('pendaftaran.edit', $pendaftaran->id) }}"
-           class="bg-green-600 hover:bg-yellow-600 text-white px-5 py-2 rounded-lg">
+           class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg">
            ✏ Edit Data
         </a>
     </div>

@@ -118,7 +118,7 @@
                         @if($pendaftaran)
                             @if($pendaftaran->status_verifikasi === 'perlu_perbaikan')
                                 <a href="{{ route('user.pendaftaran.edit', $pendaftaran->id) }}"
-                                    class="bg-green-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-semibold shadow">
+                                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg text-sm font-semibold shadow">
                                     Perbaiki Data
                                 </a>
 
@@ -217,28 +217,10 @@
         </section>
 
 
-        {{-- ================= CHATBOT & FOOTER ================= --}}
-        <!-- Tombol Chatbot -->
-        <button id="chatbotButton"
-            class="fixed bottom-6 right-6 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
-            💬 Bantuan
-        </button>
-
-        <!-- Popup Chatbot -->
-        <div id="chatbotPopup"
-            class="hidden fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div class="bg-orange-500 text-white px-4 py-2 font-semibold flex justify-between items-center">
-                <span>Chatbot
-                    Pendaftaran RA</span> <button id="closeChat" class="text-white font-bold">&times;</button>
-            </div>
-            <div id="chatMessages" class="p-3 h-64 overflow-y-auto text-sm"></div>
-            <form id="chatForm" class="flex border-t"> <input id="userMessage" type="text"
-                    class="flex-grow p-2 text-sm outline-none" placeholder="Ketik pesan..."> <button type="submit"
-                    class="bg-orange-500 text-white px-4 hover:bg-orange-600">Kirim</button> </form>
-        </div>
-
-        <script> const chatbotButton = document.getElementById('chatbotButton'); const chatbotPopup = document.getElementById('chatbotPopup'); const closeChat = document.getElementById('closeChat'); const chatForm = document.getElementById('chatForm'); const chatMessages = document.getElementById('chatMessages'); chatbotButton.addEventListener('click', () => chatbotPopup.classList.toggle('hidden')); closeChat.addEventListener('click', () => chatbotPopup.classList.add('hidden')); chatForm.addEventListener('submit', async (e) => { e.preventDefault(); const message = document.getElementById('userMessage').value; if (!message.trim()) return; // tampilkan pesan user chatMessages.innerHTML += <div class="text-right mb-2"><span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-lg inline-block">${message}</span></div>; document.getElementById('userMessage').value = ''; // kirim ke N8N const response = await fetch('https://n8n-ftnqmvzgt6pp.timah.sumopod.my.id/webhook/9ca0aac1-2cc5-4f7e-a2ec-a4e346efda26/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message }) }); const data = await response.json(); // tampilkan balasan chatbot chatMessages.innerHTML += <div class="text-left mb-2"> <span class="bg-gray-100 px-3 py-1 rounded-lg inline-block"> ${data.reply || 'Bot belum merespons.'} </span> </div> ; chatMessages.scrollTop = chatMessages.scrollHeight; }); </script>
-        <!-- Footer Lengkap -->
+       <!-- Tombol Chatbot -->
+    <a href="https://nurwana02.app.n8n.cloud/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat" class="fixed bottom-6 right-6 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
+        💬 Bantuan
+    </a>
 
 </body>
 

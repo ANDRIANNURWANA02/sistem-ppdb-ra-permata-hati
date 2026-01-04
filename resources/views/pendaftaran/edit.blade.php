@@ -6,25 +6,10 @@
             ✏️ Edit Data Pendaftaran
         </h1>
 
-        <!-- Tombol Chatbot -->
-        <button id="chatbotButton"
-            class="fixed bottom-40 right-8 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
-            💬 Bantuan
-        </button>
-
-        <!-- Popup Chatbot -->
-        <div id="chatbotPopup" class="hidden fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div class="bg-orange-500 text-white px-4 py-2 font-semibold flex justify-between items-center">
-                <span>Chatbot Pendaftaran RA</span>
-                <button id="closeChat" class="text-white font-bold">&times;</button>
-            </div>
-            <div id="chatMessages" class="p-3 h-64 overflow-y-auto text-sm"></div>
-            <form id="chatForm" class="flex border-t">
-                <input id="userMessage" type="text" class="flex-grow p-2 text-sm outline-none" placeholder="Ketik pesan...">
-                <button type="submit" class="bg-orange-500 text-white px-4 hover:bg-orange-600">Kirim</button>
-            </form>
-        </div>
-    </div>
+  <!-- Tombol Chatbot -->
+    <a href="https://nurwana02.app.n8n.cloud/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat" class="fixed bottom-40 right-8 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
+        💬 Bantuan
+    </a>
 
     <script>
         const chatbotButton = document.getElementById('chatbotButton');

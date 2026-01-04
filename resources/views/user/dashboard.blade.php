@@ -12,7 +12,7 @@
             @if($pendaftaran)
                 @if($pendaftaran->status_verifikasi === 'perlu_perbaikan')
                     <a href="{{ route('user.pendaftaran.edit', $pendaftaran->id) }}"
-                        class="bg-green-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-semibold shadow">
+                        class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg text-sm font-semibold shadow">
                         ✏️ Perbaiki Data
                     </a>
 
@@ -24,8 +24,6 @@
                 @endif
             @endif
         </div>
-
-
 
         @if(!$pendaftaran)
             <div class="bg-white p-10 rounded-2xl shadow text-center">
