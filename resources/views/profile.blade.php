@@ -285,25 +285,25 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <!-- Fasilitas 1 -->
                 <div class="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('images/fasilitas/kelas.jpg') }}" alt="Ruang Kelas"
+                    <img src="{{ asset('img/fasilitas/ruangan_kelas.jpeg') }}" alt="Ruang Kelas"
                         class="w-full h-56 object-cover">
                     <div class="p-4 text-center">
-                        <h3 class="text-lg font-semibold">Ruang Kelas Nyaman</h3>
+                        <h3 class="text-lg font-semibold">Ruangan Kelas Nyaman</h3>
                     </div>
                 </div>
 
                 <!-- Fasilitas 2 -->
                 <div class="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('images/fasilitas/taman.jpg') }}" alt="Taman Bermain"
+                    <img src="{{ asset('img/fasilitas/ruangan_uks.jpeg') }}" alt="Taman Bermain"
                         class="w-full h-56 object-cover">
                     <div class="p-4 text-center">
-                        <h3 class="text-lg font-semibold">Taman Bermain Anak</h3>
+                        <h3 class="text-lg font-semibold">Ruangan UKS</h3>
                     </div>
                 </div>
 
                 <!-- Fasilitas 3 -->
                 <div class="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('images/fasilitas/musholla.jpg') }}" alt="Musholla"
+                    <img src="{{ asset('img/fasilitas/ruangan_mushola.jpeg') }}" alt="Musholla"
                         class="w-full h-56 object-cover">
                     <div class="p-4 text-center">
                         <h3 class="text-lg font-semibold">Musholla Anak</h3>
@@ -312,16 +312,16 @@
 
                 <!-- Fasilitas 4 -->
                 <div class="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('images/fasilitas/perpustakaan.jpg') }}" alt="Perpustakaan Mini"
+                    <img src="{{ asset('img/fasilitas/taman_bermain_indoor.jpeg') }}" alt="Perpustakaan Mini"
                         class="w-full h-56 object-cover">
                     <div class="p-4 text-center">
-                        <h3 class="text-lg font-semibold">Perpustakaan Mini</h3>
+                        <h3 class="text-lg font-semibold">Ruangan Bermain</h3>
                     </div>
                 </div>
 
                 <!-- Fasilitas 5 -->
                 <div class="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('images/fasilitas/lapangan.jpg') }}" alt="Lapangan Bermain"
+                    <img src="{{ asset('img/fasilitas/taman_bermain_outdoor.jpeg') }}" alt="Lapangan Bermain"
                         class="w-full h-56 object-cover">
                     <div class="p-4 text-center">
                         <h3 class="text-lg font-semibold">Lapangan Bermain</h3>
@@ -330,10 +330,10 @@
 
                 <!-- Fasilitas 6 -->
                 <div class="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('images/fasilitas/kantin.jpg') }}" alt="Kantin Sehat"
+                    <img src="{{ asset('img/fasilitas/ruangan_seni.jpeg') }}" alt="Kantin Sehat"
                         class="w-full h-56 object-cover">
                     <div class="p-4 text-center">
-                        <h3 id="kegiatan" class="text-lg font-semibold">Kantin Sehat</h3>
+                        <h3 id="kegiatan" class="text-lg font-semibold">Ruangan Seni</h3>
                     </div>
                 </div>
             </div>
@@ -362,7 +362,7 @@
                 <!-- Kegiatan 2 -->
                 <div
                     class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('img/kegiatan/seni.jpg') }}" alt="Kelas Seni"
+                    <img src="{{ asset('img/kegiatan/seni.png') }}" alt="Kelas Seni"
                         class="w-full h-50 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold mb-2">Kelas Seni</h3>
@@ -374,7 +374,7 @@
                 <!-- Kegiatan 3 -->
                 <div
                     class="bg-white rounded-2xl shadow overflow-hidden hover:scale-105 transform transition duration-300">
-                    <img src="{{ asset('img/kegiatan/outing.jpeg') }}" alt="Outing Class"
+                    <img src="{{ asset('img\kegiatan\outing.jpeg') }}" alt="Outing Class"
                         class="w-full h-50 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold mb-2">Outing Class</h3>

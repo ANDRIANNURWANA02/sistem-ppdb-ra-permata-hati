@@ -8,6 +8,13 @@
                 Dashboard Pendaftaran
             </h1>
 
+            @if(session('success'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative text-center mt-4 mx-4"
+                    role="alert"> <strong class="font-bold">Berhasil!</strong>
+                    <span class="block sm:inline">{{ session('success') }}</span>
+                </div>
+            @endif
+
             {{-- Tombol Aksi --}}
             @if($pendaftaran)
                 @if($pendaftaran->status_verifikasi === 'perlu_perbaikan')

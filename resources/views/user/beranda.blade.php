@@ -38,7 +38,7 @@
             <nav id="menu" class="hidden md:flex space-x-6 text-white items-center">
                 @auth
                     <a href="{{ route('user.dashboard') }}#status"
-                        class=" text-gray-700 dark:text-gray-300 hover:text-white transition">
+                        class=" text-gray-800 dark:text-gray-300 hover:text-white transition">
                         Detail Pendaftaran
                     </a>
                     <form action="{{ route('logout') }}" method="POST" class="inline">

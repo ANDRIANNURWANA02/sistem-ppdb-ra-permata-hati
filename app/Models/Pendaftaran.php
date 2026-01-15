@@ -18,7 +18,7 @@ class Pendaftaran extends Model
         'nama_ayah', 'tempat_lahir_ayah', 'tanggal_lahir_ayah', 'agama_ayah', 'kewarganegaraan_ayah',
         'pendidikan_terakhir_ayah', 'pekerjaan_ayah', 'pangkat_ayah', 'golongan_darah_ayah', 'penghasilan_ayah',
         'nama_ibu', 'tempat_lahir_ibu', 'tanggal_lahir_ibu', 'agama_ibu', 'kewarganegaraan_ibu',
-        'pendidikan_terakhir_ibu', 'pekerjaan_ibu', 'penghasilan_ibu', 'kemampuan',
+        'pendidikan_terakhir_ibu', 'pekerjaan_ibu', 'pangkat_ibu', 'golongan_darah_ibu', 'penghasilan_ibu', 'kemampuan',
         'file_kk', 'file_akte', 'file_surat_lain', 'status_verifikasi', 'catatan_admin',
     ];
 

@@ -78,10 +78,10 @@ Route::middleware('auth')->group(function () {
         ->name('pendaftaran.index');
     Route::post('/pendaftaran', [PendaftaranController::class, 'store'])
         ->name('pendaftaran.store');
-        
-     Route::get('/user/pendaftaran/edit', [PendaftaranController::class, 'editUser'])
-        ->name('user.pendaftaran.edit');
 
+     // Edit & Update pendaftaran user
+    Route::get('/user/pendaftaran/edit', [PendaftaranController::class, 'editUser'])
+        ->name('user.pendaftaran.edit');
     Route::put('/user/pendaftaran', [PendaftaranController::class, 'updateUser'])
         ->name('user.pendaftaran.update');
 });
@@ -102,13 +102,13 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('/pendaftaran/{id}/verifikasi', [PendaftaranController::class, 'verifikasi'])->name('admin.pendaftaran.verifikasi');
 
     // Kelola Pendaftaran
-    Route::resource('pendaftaran', PendaftaranController::class);
-    Route::get('/pendaftaran/{id}/edit', [PendaftaranController::class, 'edit'])
+
+        Route::get('/pendaftaran/{id}/edit', [PendaftaranController::class, 'edit'])
         ->name('pendaftaran.edit');
 
     Route::put('/pendaftaran/{id}', [PendaftaranController::class, 'update'])
         ->name('pendaftaran.update');
-
+        
     Route::delete('/pendaftaran/{id}', [PendaftaranController::class, 'destroy'])
         ->name('pendaftaran.destroy');
 
