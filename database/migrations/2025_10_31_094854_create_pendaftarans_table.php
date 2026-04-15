@@ -62,7 +62,8 @@ return new class extends Migration
     // File upload
     $table->string('file_kk')->nullable();
     $table->string('file_akte')->nullable();
-    $table->string('file_surat_lain')->nullable();
+    $table->string('file_ktp_ayah')->nullable();
+    $table->string('file_ktp_ibu')->nullable();
 
     $table->timestamps();
 });

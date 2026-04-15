@@ -56,9 +56,9 @@
         <div id="mobile-menu" class="md:hidden hidden bg-gray-800 text-white px-6 py-4 space-y-4">
             @auth
                 <a href="{{ route('user.dashboard') }}#status"
-                        class=" text-gray-700 dark:text-gray-300 hover:text-white transition">
-                        Detail Pendaftaran
-                    </a>
+                    class=" text-gray-700 dark:text-gray-300 hover:text-white transition">
+                    Detail Pendaftaran
+                </a>
                 <form action="{{ route('logout') }}" method="POST"> @csrf <button type="submit"
                         class="w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"> Logout
                     </button>
@@ -124,7 +124,7 @@
 
                             @elseif($pendaftaran->status_verifikasi === 'lolos')
                                 <button
-                                    class="bg-gray-300 text-gray-600 px-5 py-2 rounded-lg text-sm font-semibold cursor-not-allowed"
+                                    class="text-gray-600 px-5 py-2 rounded-lg text-sm font-semibold cursor-not-allowed"
                                     disabled title="Data sudah diverifikasi dan tidak dapat diubah">
                                     ✔ Data Terkunci
                                 </button>
@@ -136,12 +136,25 @@
                     <div class="mb-6">
                         @if($pendaftaran->status_verifikasi === 'menunggu')
                             <div class="bg-yellow-100 border border-yellow-300 text-yellow-800 px-6 py-4 rounded-xl">
-                                ⏳ <b>Status:</b> Menunggu verifikasi admin
+                                ⏳ <b>Status:</b> Menunggu Verifikasi Admin
                             </div>
 
                         @elseif($pendaftaran->status_verifikasi === 'lolos')
                             <div class="bg-green-100 border border-green-300 text-green-800 px-6 py-4 rounded-xl">
                                 ✅ <b>Status:</b> LOLOS
+
+                                {{-- LINK WHATSAPP --}}
+                                <div class="mt-4 bg-green-50 border border-green-300 p-4 rounded-lg">
+                                    🎉 <b>Selamat! Anda diterima</b><br>
+                                    Silakan bergabung ke grup WhatsApp:
+
+                                    <div class="mt-2">
+                                        <a href="https://chat.whatsapp.com/xxxxxxx" target="_blank"
+                                            class="inline-block bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                                            Gabung Grup WhatsApp
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
 
                         @elseif($pendaftaran->status_verifikasi === 'perlu_perbaikan')
@@ -217,10 +230,11 @@
         </section>
 
 
-       <!-- Tombol Chatbot -->
-    <a href="https://nurwana02.app.n8n.cloud/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat" class="fixed bottom-6 right-6 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
-        💬 Bantuan
-    </a>
+        <!-- Tombol Chatbot -->
+        <a href="https://n8n-xlwrxwzuwnpg.tomat.sumopod.my.id/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat"
+            class="fixed bottom-6 right-6 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
+            💬 Bantuan
+        </a>
 
 </body>
 

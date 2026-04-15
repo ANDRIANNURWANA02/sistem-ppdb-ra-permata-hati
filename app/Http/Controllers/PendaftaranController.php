@@ -94,7 +94,8 @@ class PendaftaranController extends Controller
             // File Upload (max 5MB)
             'file_kk' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
             'file_akte' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
-            'file_surat_lain' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'file_ktp_ayah' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'file_ktp_ibu' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
 
         ]);
 
@@ -105,8 +106,11 @@ class PendaftaranController extends Controller
         if ($request->hasFile('file_akte')) {
             $validated['file_akte'] = $request->file('file_akte')->store('uploads/akte', 'public');
         }
-        if ($request->hasFile('file_surat_lain')) {
-            $validated['file_surat_lain'] = $request->file('file_surat_lain')->store('uploads/surat', 'public');
+        if ($request->hasFile('file_ktp_ayah')) {
+            $validated['file_ktp_ayah'] = $request->file('file_ktp_ayah')->store('uploads/surat', 'public');
+        }
+        if ($request->hasFile('file_ktp_ibu')) {
+            $validated['file_ktp_ibu'] = $request->file('file_ktp_ibu')->store('uploads/surat', 'public');
         }
 
         // Tambahkan user_id
@@ -143,8 +147,11 @@ class PendaftaranController extends Controller
             case 'akte':
                 $filePath = $pendaftaran->file_akte;
                 break;
-            case 'lain':
-                $filePath = $pendaftaran->file_surat_lain;
+            case 'ayah':
+                $filePath = $pendaftaran->file_ktp_ayah;
+                break;
+            case 'ibu':
+                $filePath = $pendaftaran->file_ktp_ibu;
                 break;
             default:
                 return redirect()->back()->with('error', 'Jenis file tidak valid.');
@@ -232,10 +239,11 @@ class PendaftaranController extends Controller
             // File Upload (max 5MB)
             'file_kk' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
             'file_akte' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
-            'file_surat_lain' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'file_ktp_ayah' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'file_ktp_ibu' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
         ]);
 
-        $pendaftaran->update($request->except(['file_kk', 'file_akte', 'file_surat_lain']));
+        $pendaftaran->update($request->except(['file_kk', 'file_akte', 'file_ktp_ayah', 'file_ktp_ibu']));
 
         // Update file jika ada
         if ($request->hasFile('file_kk')) {
@@ -244,8 +252,11 @@ class PendaftaranController extends Controller
         if ($request->hasFile('file_akte')) {
             $pendaftaran->file_akte = $request->file('file_akte')->store('uploads/akte', 'public');
         }
-        if ($request->hasFile('file_surat_lain')) {
-            $pendaftaran->file_surat_lain = $request->file('file_surat_lain')->store('uploads/surat', 'public');
+        if ($request->hasFile('file_ktp_ayah')) {
+            $pendaftaran->file_ktp_ayah = $request->file('file_ktp_ayah')->store('uploads/surat', 'public');
+        }
+        if ($request->hasFile('file_ktp_ibu')) {
+            $pendaftaran->file_ktp_ibu = $request->file('file_ktp_ibu')->store('uploads/surat', 'public');
         }
 
         $pendaftaran->save();
@@ -360,7 +371,8 @@ class PendaftaranController extends Controller
             // File Upload (max 5MB)
             'file_kk' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
             'file_akte' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
-            'file_surat_lain' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'file_ktp_ayah' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
+            'file_ktp_ibu' => 'nullable|file|mimes:pdf,jpg,jpeg,png|max:5120',
         ]);
 
         // Handle file upload dulu
@@ -370,12 +382,15 @@ class PendaftaranController extends Controller
         if ($request->hasFile('file_akte')) {
             $pendaftaran->file_akte = $request->file('file_akte')->store('uploads/akte', 'public');
         }
-        if ($request->hasFile('file_surat_lain')) {
-            $pendaftaran->file_surat_lain = $request->file('file_surat_lain')->store('uploads/surat', 'public');
+        if ($request->hasFile('file_ktp_ayah')) {
+            $pendaftaran->file_ktp_ayah = $request->file('file_ktp_ayah')->store('uploads/surat', 'public');
+        }
+        if ($request->hasFile('file_ktp_ibu')) {
+            $pendaftaran->file_ktp_ibu = $request->file('file_ktp_ibu')->store('uploads/surat', 'public');
         }
 
         // Update field lain (kecuali file)
-        $pendaftaran->update($request->except(['file_kk', 'file_akte', 'file_surat_lain']));
+        $pendaftaran->update($request->except(['file_kk', 'file_akte', 'file_ktp_ayah', 'file_ktp_ibu']));
 
         return redirect()->route('user.dashboard')
             ->with('success', 'Data pendaftaran berhasil diperbarui.');

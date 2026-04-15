@@ -7,7 +7,7 @@
         </h1>
 
         <!-- Tombol Chatbot -->
-        <a href="https://nurwana02.app.n8n.cloud/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat"
+        <a href="https://n8n-xlwrxwzuwnpg.tomat.sumopod.my.id/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat"
             class="fixed bottom-40 right-8 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
             💬 Bantuan
         </a>
@@ -417,14 +417,14 @@
                 </div>
 
                 <!-- File Upload -->
-                <div class="grid md:grid-cols-3 gap-4 mt-6">
+                <div class="grid md:grid-cols-2 gap-4 mt-6">
                     <div>
                         <label class="block text-gray-700 font-semibold mb-2">File KK</label>
                         @if($pendaftaran->file_kk)
                             <a href="{{ asset('storage/' . $pendaftaran->file_kk) }}" target="_blank"
                                 class="text-blue-600 hover:underline text-sm">Lihat KK</a>
                         @endif
-                        <input type="file" name="file_kk" class="w-full border-gray-300 rounded-lg p-2 mt-2">
+                        <input type="file" name="file_kk" accept="image/*" class="w-full border-gray-300 rounded-lg p-2 mt-2">
                     </div>
                     <div>
                         <label class="block text-gray-700 font-semibold mb-2">File Akte</label>
@@ -432,15 +432,23 @@
                             <a href="{{ asset('storage/' . $pendaftaran->file_akte) }}" target="_blank"
                                 class="text-blue-600 hover:underline text-sm">Lihat Akte</a>
                         @endif
-                        <input type="file" name="file_akte" class="w-full border-gray-300 rounded-lg p-2 mt-2">
+                        <input type="file" name="file_akte" accept="image/*" class="w-full border-gray-300 rounded-lg p-2 mt-2">
                     </div>
                     <div>
-                        <label class="block text-gray-700 font-semibold mb-2">File Lainnya</label>
-                        @if($pendaftaran->file_surat_lain)
-                            <a href="{{ asset('storage/' . $pendaftaran->file_surat_lain) }}" target="_blank"
+                        <label class="block text-gray-700 font-semibold mb-2">KTP Ayah</label>
+                        @if($pendaftaran->file_ktp_ayah)
+                            <a href="{{ asset('storage/' . $pendaftaran->file_ktp_ayah) }}" target="_blank"
                                 class="text-blue-600 hover:underline text-sm">Lihat File</a>
                         @endif
-                        <input type="file" name="file_surat_lain" class="w-full border-gray-300 rounded-lg p-2 mt-2">
+                        <input type="file" name="file_ktp_ayah" accept="image/*" class="w-full border-gray-300 rounded-lg p-2 mt-2">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">KTP Ibu</label>
+                        @if($pendaftaran->file_ktp_ibu)
+                            <a href="{{ asset('storage/' . $pendaftaran->file_ktp_ibu) }}" target="_blank"
+                                class="text-blue-600 hover:underline text-sm">Lihat File</a>
+                        @endif
+                        <input type="file" name="file_ktp_ibu" accept="image/*" class="w-full border-gray-300 rounded-lg p-2 mt-2">
                     </div>
                 </div>
                 <!-- Tombol -->

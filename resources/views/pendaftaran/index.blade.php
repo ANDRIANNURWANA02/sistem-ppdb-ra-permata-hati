@@ -11,7 +11,7 @@
 <body class="bg-gray-100 text-gray-900 min-h-screen flex items-center justify-center p-6">
 
     <!-- Tombol Chatbot -->
-    <a href="https://nurwana02.app.n8n.cloud/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat"
+    <a href="https://n8n-xlwrxwzuwnpg.tomat.sumopod.my.id/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat"
         class="fixed bottom-40 right-8 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
         💬 Bantuan
     </a>
@@ -336,16 +336,20 @@
             <section>
                 <h3 class="text-xl font-semibold text-gray-700 mb-4 border-b-2 border-yellow-500 pb-2">Lampiran Dokumen
                 </h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-gray-800 font-medium mb-1">Kartu Keluarga</label>
-                        <input type="file" name="file_kk" class="w-full border-gray-300 rounded-lg p-2.5 bg-gray-50">
+                        <input type="file" name="file_kk" accept="image/*" class="w-full border-gray-300 rounded-lg p-2.5 bg-gray-50">
                     </div>
                     <div> <label class="block text-gray-800 font-medium mb-1">Akta Kelahiran</label>
-                        <input type="file" name="file_akte" class="w-full border-gray-300 rounded-lg p-2.5 bg-gray-50">
+                        <input type="file" name="file_akte" accept="image/*" class="w-full border-gray-300 rounded-lg p-2.5 bg-gray-50">
                     </div>
-                    <div> <label class="block text-gray-800 font-medium mb-1">Surat Lainnya</label>
-                        <input type="file" name="file_surat_lain"
+                    <div> <label class="block text-gray-800 font-medium mb-1">KTP Ayah</label>
+                        <input type="file" name="file_ktp_ayah" accept="image/*"
+                            class="w-full border-gray-300 rounded-lg p-2.5 bg-gray-50">
+                    </div>
+                    <div> <label class="block text-gray-800 font-medium mb-1">KTP Ibu</label>
+                        <input type="file" name="file_ktp_ibu" accept="image/*"
                             class="w-full border-gray-300 rounded-lg p-2.5 bg-gray-50">
                     </div>
                 </div>

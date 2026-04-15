@@ -18,9 +18,9 @@
             <form method="POST" action="{{ route('register') }}">
                 @csrf
 
-                <!-- Name -->
+                <!-- Nama -->
                 <div class="mb-4">
-                    <label for="name" class="block  font-semibold mb-1">Name</label>
+                    <label for="name" class="block  font-semibold mb-1">Nama</label>
                     <input id="name" name="name" type="text" value="{{ old('name') }}"
                         class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-yellow-400"
                         required autofocus autocomplete="name">

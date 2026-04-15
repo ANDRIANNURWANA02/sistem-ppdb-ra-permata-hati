@@ -70,7 +70,7 @@
     </header>
 
     <!-- Tombol Chatbot -->
-    <a href="https://nurwana02.app.n8n.cloud/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat" class="fixed bottom-6 right-6 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
+    <a href="https://n8n-xlwrxwzuwnpg.tomat.sumopod.my.id/webhook/ac67d7fc-1428-4fb5-9295-c8284a991857/chat" class="fixed bottom-6 right-6 bg-orange-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-orange-600 transition">
         💬 Bantuan
     </a>
 
@@ -225,12 +225,12 @@
             </div>
             <div>
                 <h3 class="text-3xl font-bold text-yellow-500 mb-4">Misi</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <ol start="1" class="list-disc list-inside text-gray-700 space-y-2">
                     <li>Anak terbiasa mentaati ajaran agama islam dan berbuat baik.</li>
                     <li>Anak memiliki perkembangan kognitif yang baik dan kreatif.</li>
                     <li>Anak dapat dipercaya dan jujur baik dalam perkataan maupun perbuatan.</li>
                     <li>Anak berani tampil di depan orang banyak dan percaya diri.</li>
-                </ul>
+                </ol>
             </div>
         </div>
     </section>
@@ -437,7 +437,7 @@
             <div>
                 <h3 class="text-yellow-400 font-bold text-lg mb-4">Navigasi Cepat</h3>
                 <ul class="space-y-2">
-                    <li><a href="#profil" class="hover:text-yellow-400">Profil</a></li>
+                    <li><a href="#profil" class="hover:text-yellow-400">Beranda</a></li>
                     <li><a href="#tentang" class="hover:text-yellow-400">Tentang Kami</a></li>
                     <li><a href="#fasilitas" class="hover:text-yellow-400">Fasilitas</a></li>
                     <li><a href="#kegiatan" class="hover:text-yellow-400">Kegiatan</a></li>

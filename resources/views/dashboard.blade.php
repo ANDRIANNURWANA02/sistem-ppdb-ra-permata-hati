@@ -149,11 +149,19 @@
                                     <span class="block text-gray-400 text-sm text-center">Akte Tidak ada</span>
                                 @endif
 
-                                <!-- Tombol Download File Lainnya -->
-                                @if($pendaftaran->file_surat_lain)
+                                <!-- Tombol Download KTP -->
+                                @if($pendaftaran->file_ktp_ayah)
                                     <a href="{{ route('pendaftaran.download', ['jenis' => 'lain', 'id' => $pendaftaran->id]) }}"
                                         class="block bg-green-500 text-white hover:bg-green-600 border border-gray-500 shadow-md px-3 py-1 rounded text-sm text-center mb-1">
-                                        Download Lainnya
+                                        Download KTP Ayah
+                                    </a>
+                                @else
+                                    <span class="block text-gray-400 text-sm text-center">Tidak ada file lain</span>
+                                @endif
+                                @if($pendaftaran->file_ktp_ibu)
+                                    <a href="{{ route('pendaftaran.download', ['jenis' => 'lain', 'id' => $pendaftaran->id]) }}"
+                                        class="block bg-green-500 text-white hover:bg-green-600 border border-gray-500 shadow-md px-3 py-1 rounded text-sm text-center mb-1">
+                                        Download KTP Ibu
                                     </a>
                                 @else
                                     <span class="block text-gray-400 text-sm text-center">Tidak ada file lain</span>

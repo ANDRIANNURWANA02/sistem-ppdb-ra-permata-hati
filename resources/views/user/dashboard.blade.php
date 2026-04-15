@@ -185,9 +185,18 @@
                     </li>
 
                     <li>
-                        File Lainnya
-                        @if($pendaftaran->file_surat_lain)
-                            <a href="{{ asset('storage/' . $pendaftaran->file_surat_lain) }}" target="_blank"
+                        KTP Ayah
+                        @if($pendaftaran->file_ktp_ayah)
+                            <a href="{{ asset('storage/' . $pendaftaran->file_ktp_ayah) }}" target="_blank"
+                                class="block bg-green-500 text-white hover:bg-green-600 border border-gray-500 shadow-md px-3 py-1 rounded text-sm text-center mb-1">Lihat</a>
+                        @else
+                            <span class="text-gray-400">Tidak ada</span>
+                        @endif
+                    </li>
+                    <li>
+                        KTP Ibu
+                        @if($pendaftaran->file_ktp_ibu)
+                            <a href="{{ asset('storage/' . $pendaftaran->file_ktp_ibu) }}" target="_blank"
                                 class="block bg-green-500 text-white hover:bg-green-600 border border-gray-500 shadow-md px-3 py-1 rounded text-sm text-center mb-1">Lihat</a>
                         @else
                             <span class="text-gray-400">Tidak ada</span>
