@@ -1,11 +1,11 @@
-<nav class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+<nav class="bg-gray-900 dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center h-16">
 
             <!-- LOGO (KIRI) -->
             <div class="flex items-center gap-3">
                 <img src="{{ asset('img/logora.png') }}" class="h-10 w-auto" alt="Logo">
-                <span class="text-lg font-semibold text-gray-800 dark:text-white">
+                <span class="text-lg font-semibold text-white dark:text-white">
                     RA Permata Hati
                 </span>
             </div>
@@ -23,11 +23,11 @@
                     <a href="{{ route('register') }}" class="text-gray-600 hover:text-blue-600">Register</a>
                 @else
                     @if(Auth::user()->role === 'admin')
-                        <a href="{{ route('admin.dashboard') }}" class="nav-link text-gray-300 dark:hover:text-white">
+                        <a href="{{ route('admin.dashboard') }}" class="nav-link text-white">
                             Dashboard Admin
                         </a>
                     @else
-                        <a href="{{ url('/user/beranda') }}" class="nav-link text-gray-300 dark:hover:text-white">
+                        <a href="{{ url('/user/beranda') }}" class="nav-link text-white">
                             Beranda
                         </a>
                     @endif
@@ -36,7 +36,7 @@
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             <button
-                                class="flex items-center text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                                class="flex items-center text-sm font-medium text-white">
                                 {{ Auth::user()->name }}
                                 <svg class="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd"
@@ -66,7 +66,7 @@
             <!-- HAMBURGER MOBILE -->
             <div class="flex items-center sm:hidden ms-auto">
                 <button id="menu-toggle"
-                    class="text-gray-700 dark:text-white text-3xl focus:outline-none">
+                    class="text-white dark:text-white text-3xl focus:outline-none">
                     ☰
                 </button>
             </div>

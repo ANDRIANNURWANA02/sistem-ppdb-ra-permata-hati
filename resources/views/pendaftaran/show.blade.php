@@ -7,21 +7,21 @@
         <div class="flex justify-between items-center mb-6">
 
     <div>
-        <h1 class="text-2xl font-bold text-white">Detail Data Pendaftaran</h1>
-        <p class="text-sm text-white">
+        <h1 class="text-2xl font-bold text-gray-900">Detail Data Pendaftaran</h1>
+        <p class="text-sm text-gray-900">
             ID Pendaftaran: {{ $pendaftaran->id }} |
             Dibuat: {{ $pendaftaran->created_at->format('d M Y') }}
         </p>
     </div>
 
-    <div class="flex gap-2">
+    {{-- <div class="flex gap-2">
         <!-- STATUS -->
         <span class="px-4 py-2 rounded-full text-sm font-semibold text-white
             {{ $pendaftaran->status_verifikasi == 'lolos' ? 'bg-green-600' :
                ($pendaftaran->status_verifikasi == 'perlu_perbaikan' ? 'bg-yellow-500' : 'bg-gray-500') }}">
             {{ ucfirst(str_replace('_',' ', $pendaftaran->status_verifikasi)) }}
         </span>
-    </div>
+    </div> --}}
 
 </div>
 

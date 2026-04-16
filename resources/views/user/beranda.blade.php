@@ -38,13 +38,13 @@
             <nav id="menu" class="hidden md:flex space-x-6 text-white items-center">
                 @auth
                     <a href="{{ route('user.dashboard') }}#status"
-                        class=" text-gray-800 dark:text-gray-300 hover:text-white transition">
+                        class=" text-white dark:text-white-300 hover:text-white transition">
                         Detail Pendaftaran
                     </a>
                     <form action="{{ route('logout') }}" method="POST" class="inline">
                         @csrf
                         <button type="submit"
-                            class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">
+                            class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">
                             Logout
                         </button>
                     </form>
@@ -56,11 +56,11 @@
         <div id="mobile-menu" class="md:hidden hidden bg-gray-800 text-white px-6 py-4 space-y-4">
             @auth
                 <a href="{{ route('user.dashboard') }}#status"
-                    class=" text-gray-700 dark:text-gray-300 hover:text-white transition">
+                    class=" text-white dark:text-white hover:text-white transition">
                     Detail Pendaftaran
                 </a>
                 <form action="{{ route('logout') }}" method="POST"> @csrf <button type="submit"
-                        class="w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"> Logout
+                        class="w-full bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition"> Logout
                     </button>
                 </form>
             @endauth
